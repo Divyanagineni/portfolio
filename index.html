@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8ff811ab71.js" crossorigin="anonymous"></script>"
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Divya.png" class="Logo" width="200px">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hi. I'm <span>Divya</span></h1> <p>from Salem</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="aboutcol1">
+                <img src="lftimg.png" height="500px">
+            </div>
+            <div class="aboutcol2">
+                <h1 class="subtitle">About me</h1>
+                <p>A B.A. graduate , transitioning into Quality Assurance with strong analytical skills and <br>self training in software testing. Detail-oriented and driven, eager to <br>apply my problem-solving skills and a commitment to quality in a QA role.</p>
+                <div class="tabtitles">
+                    <p class="tab-links active-link"  onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Graphic Designing</span><br>Expertise to create visually compelling designs for printr and digital media</li>
+                        <li><span>Interpersonal Skills</span><br>Build client relationships and drives revenue through sales.</li>
+                        <li><span>Manual Testing </span><br>Test case creation, Knowledge of functional, regression, integration, and<br> user acceptance testing (UAT).
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Business Development Executive</span><br>Webdoux</li>
+                        <li><span>Graphic Designer (Freelance)</span><br>Prime City Ventures</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019-2022</span><br>B.A.(Histoty, Public Administration and Geography) from Osmania University, Hyderabad</li>
+                        <li><span>2022-2023</span><br>Graphic Design and UI/UX training at Image Institute</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1> 
+        <div class="services-list">
+            <div>
+                <h2>Graphic Design</h2>
+                <p>Offering expert design services for both print and digital media, specializing in creating visually impactful graphics. From logos and branding to social media visuals and marketing materials, I bought your ideas to life with precision and creativity.</p>
+                <a href="https://www.behance.net/divyachandramouli" target="_blank">Learn more</a>
+            </div>
+            <div>
+                <h2>BDE</h2>
+                <p>Providing strategic business development services to drive growth and build lasting partnerships. Specializing in identifying new opportunities, expanding market reach, and creating tailored solutions to meet client needs.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Social Media Manager</h2>
+                <p>To enhance the brand's online presence. From content creation and strategy to community engagement and analytics, to increase audience reach and drive meaningful interactions. </p>
+                <a href="https://www.instagram.com/agnisteels?igsh=d3Y2c3h2MTJzM2M5" target="_blank">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>divyachandramouli20@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9344485951</p>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="" class="btn">Download CV</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body> 
+</html>
